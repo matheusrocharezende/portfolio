@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "intercel",
+    "title": "Intercel",
+    "description": "App de gestão de plano de celular, com acompanhamento de consumo de dados em tempo real.",
+    "year": 2025,
+    "tags": ["Product Design", "Mobile"],
+    "coverImage": "/images/projects/intercel.jpg"
+  },
+  {
+    "slug": "giftcard-shop",
+    "title": "Giftcard Shop",
+    "description": "Loja de gift cards com cashback, navegação por categorias e ofertas em destaque.",
+    "year": 2025,
+    "tags": ["E-commerce", "Mobile"],
+    "coverImage": "/images/projects/giftcard.jpg"
+  },
+  {
+    "slug": "ecommerce",
+    "title": "Ecommerce",
+    "description": "Experiência de compras e acompanhamento de pedidos para um marketplace multi-categoria.",
+    "year": 2025,
+    "tags": ["E-commerce", "UX"],
+    "coverImage": "/images/projects/ecommerce.jpg"
+  },
+  {
+    "slug": "united-exchange",
+    "title": "United Exchange",
+    "description": "Site institucional para consultoria patrimonial, com foco em clareza e confiança.",
+    "year": 2025,
+    "tags": ["Web", "Branding"],
+    "coverImage": "/images/projects/united.jpg"
+  },
+  {
+    "slug": "itau-system",
+    "title": "Itaú System",
+    "description": "Aplicação de sistemas internos seguindo o design system e a linguagem de marca do Itaú.",
+    "year": 2024,
+    "tags": ["Design System", "Web"],
+    "coverImage": "/images/projects/itau.jpg"
+  },
+  {
+    "slug": "other-achieve",
+    "title": "Other / Achieve",
+    "description": "Seleção de projetos autorais e experimentos: Cell2Frames, calendários e ilustrações 3D.",
+    "year": 2024,
+    "tags": ["Side Projects"],
+    "coverImage": "/images/projects/other.jpg"
+  }
+]
