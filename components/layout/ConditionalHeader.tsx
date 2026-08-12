@@ -1,16 +1,16 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { Footer } from "./Footer";
+import { Header } from "./Header";
 
-const HIDDEN_ON = ["/", "/visual-notes"];
+const HIDDEN_ON = ["/visual-notes"];
 
-export function ConditionalFooter() {
+export function ConditionalHeader() {
   const pathname = usePathname();
 
   if (HIDDEN_ON.includes(pathname)) {
     return null;
   }
 
-  return <Footer />;
+  return <Header />;
 }

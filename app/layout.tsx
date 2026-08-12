@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist_Mono } from "next/font/google";
 import { Roboto } from "next/font/google";
 import { ConditionalFooter } from "@/components/layout/ConditionalFooter";
-import { Header } from "@/components/layout/Header";
+import { ConditionalHeader } from "@/components/layout/ConditionalHeader";
 import { siteConfig } from "@/lib/site";
 import "./globals.css";
 
@@ -36,7 +36,7 @@ export default function RootLayout({
         className={`${roboto.variable} ${geistMono.variable} min-h-screen antialiased`}
       >
         <div className="flex min-h-screen flex-col">
-          <Header />
+          <ConditionalHeader />
           <main className="flex-1">{children}</main>
           <ConditionalFooter />
         </div>

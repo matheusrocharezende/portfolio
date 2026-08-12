@@ -12,7 +12,7 @@ function NavLink({ href, label }: { href: string; label: string }) {
     <Link
       href={href}
       className={`p-4 text-2xl font-medium leading-normal transition-opacity duration-200 ${
-        isActive ? "opacity-100" : "opacity-100 hover:opacity-60"
+        isActive ? "text-accent" : "hover:opacity-60"
       }`}
     >
       {label}
