@@ -1,4 +1,4 @@
-export function VisualNotesFooter() {
+export function DarkFooter() {
   return (
     <footer className="flex w-full items-center justify-center gap-5 bg-black px-10 pt-10 pb-20 text-[15px]">
       <div className="flex flex-1 flex-col gap-1">
