@@ -24,7 +24,7 @@ export function CountrySection({ country }: { country: VisualNotesCountry }) {
               src={photo}
               alt={`${country.label} — foto ${index + 1}`}
               fill
-              className="object-cover"
+              className="object-cover outline outline-1 -outline-offset-1 outline-white/10"
               sizes="(min-width: 768px) 45vw, 90vw"
             />
           </div>

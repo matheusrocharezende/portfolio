@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import { DarkFooter } from "@/components/layout/DarkFooter";
 import { CountrySection } from "@/components/visual-notes/CountrySection";
-import { VisualNotesFooter } from "@/components/visual-notes/VisualNotesFooter";
 import { VisualNotesHeader } from "@/components/visual-notes/VisualNotesHeader";
 import { visualNotesCountries } from "@/lib/visual-notes";
 
@@ -15,7 +15,7 @@ export default function VisualNotesPage() {
       {visualNotesCountries.map((country) => (
         <CountrySection key={country.slug} country={country} />
       ))}
-      <VisualNotesFooter />
+      <DarkFooter />
     </div>
   );
 }
