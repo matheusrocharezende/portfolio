@@ -10,7 +10,7 @@ const DIVIDER = "border-[#383838]";
 export function ExperienceSection() {
   return (
     <section className="flex w-full flex-col gap-5 px-10 pb-20 sm:flex-row">
-      <div className="top-0 shrink-0 pr-3 sm:sticky sm:w-[300px]">
+      <div className="top-0 shrink-0 pr-[40px] sm:sticky sm:w-[445px]">
         <p className={`border-t ${DIVIDER} py-8 text-2xl font-medium tracking-[-0.24px]`}>
           EXPERIENCE
         </p>
