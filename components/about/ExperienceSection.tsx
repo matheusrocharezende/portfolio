@@ -49,7 +49,7 @@ export function ExperienceSection() {
           className={`flex flex-col gap-10 border-t ${DIVIDER} pt-8 pb-20`}
         >
           <h2 className="text-2xl font-medium">Skills</h2>
-          <div className="flex flex-wrap gap-5 text-[15px] tracking-[-0.15px]">
+          <div className="flex flex-wrap gap-5 text-[13px] tracking-[-0.13px]">
             <div className="flex w-full max-w-[600px] flex-col gap-12">
               {skillGroups.slice(0, 2).map((group) => (
                 <div key={group.label}>
@@ -85,10 +85,10 @@ export function ExperienceSection() {
           aria-label="Educational background"
           className={`flex flex-col gap-10 border-t ${DIVIDER} pt-8 pb-20`}
         >
-          <h2 className="text-[13px] font-semibold tracking-[-0.065px]">
+          <h2 className="text-[11px] font-semibold tracking-[-0.055px]">
             Education
           </h2>
-          <div className="text-[15px] tracking-[-0.15px]">
+          <div className="text-[13px] tracking-[-0.13px]">
             <h4 className="mb-0 leading-[1.4]">{education.degree}</h4>
             <h4 className="leading-[1.4] text-muted">{education.school}</h4>
           </div>
@@ -98,10 +98,10 @@ export function ExperienceSection() {
           aria-label="Certifications"
           className={`flex flex-col gap-10 border-t ${DIVIDER} pt-8 pb-20`}
         >
-          <h2 className="text-[13px] font-semibold tracking-[-0.065px]">
+          <h2 className="text-[11px] font-semibold tracking-[-0.055px]">
             Certifications:
           </h2>
-          <div className="grid grid-cols-1 gap-x-10 gap-y-8 text-[15px] tracking-[-0.15px] sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-x-10 gap-y-8 text-[13px] tracking-[-0.13px] sm:grid-cols-2">
             {certifications.map((cert) => (
               <div key={cert.title}>
                 <h4 className="mb-0 leading-[1.4]">{cert.title}</h4>
