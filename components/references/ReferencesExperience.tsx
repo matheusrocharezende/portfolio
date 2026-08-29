@@ -370,7 +370,8 @@ export function ReferencesExperience() {
         clearTimeout(scrollEndTimer);
         scrollEndTimer = setTimeout(onScrollEnd, 200);
       };
-      if (!("onscrollend" in window)) {
+      const supportsScrollEnd = "onscrollend" in window;
+      if (!supportsScrollEnd) {
         window.addEventListener("scroll", scrollEndFallback, { passive: true });
         cleanups.push(() => window.removeEventListener("scroll", scrollEndFallback));
       }
