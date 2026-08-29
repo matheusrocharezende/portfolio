@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { DarkFooter } from "@/components/layout/DarkFooter";
+import { DarkHeader } from "@/components/layout/DarkHeader";
 import { CountrySection } from "@/components/visual-notes/CountrySection";
-import { VisualNotesHeader } from "@/components/visual-notes/VisualNotesHeader";
 import { visualNotesCountries } from "@/lib/visual-notes";
 
 export const metadata: Metadata = {
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function VisualNotesPage() {
   return (
     <div className="flex w-full flex-col items-start bg-black">
-      <VisualNotesHeader />
+      <DarkHeader />
       {visualNotesCountries.map((country) => (
         <CountrySection key={country.slug} country={country} />
       ))}
