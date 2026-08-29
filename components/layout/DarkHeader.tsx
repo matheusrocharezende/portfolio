@@ -28,6 +28,11 @@ export function DarkHeader() {
   }, []);
 
   useEffect(() => {
+    // Seed with the real starting position (not 0) so a scroll position the
+    // browser restores on load/reload isn't mistaken for a downward scroll
+    // and doesn't hide the header before the user has scrolled at all.
+    lastScrollY.current = window.scrollY;
+
     const handleScroll = () => {
       const currentY = window.scrollY;
 
