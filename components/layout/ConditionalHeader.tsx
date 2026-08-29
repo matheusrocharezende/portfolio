@@ -3,7 +3,7 @@
 import { usePathname } from "next/navigation";
 import { Header } from "./Header";
 
-const HIDDEN_ON = ["/visual-notes"];
+const HIDDEN_ON = ["/visual-notes", "/references"];
 
 export function ConditionalHeader() {
   const pathname = usePathname();
