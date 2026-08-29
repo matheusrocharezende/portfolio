@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist_Mono } from "next/font/google";
+import { Geist_Mono, IBM_Plex_Mono } from "next/font/google";
 import { Roboto } from "next/font/google";
 import { ConditionalFooter } from "@/components/layout/ConditionalFooter";
 import { ConditionalHeader } from "@/components/layout/ConditionalHeader";
@@ -15,6 +15,12 @@ const roboto = Roboto({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const ibmPlexMono = IBM_Plex_Mono({
+  variable: "--font-ibm-plex-mono",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
 });
 
 export const metadata: Metadata = {
@@ -33,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body
-        className={`${roboto.variable} ${geistMono.variable} min-h-screen antialiased`}
+        className={`${roboto.variable} ${geistMono.variable} ${ibmPlexMono.variable} min-h-screen antialiased`}
       >
         <div className="flex min-h-screen flex-col">
           <ConditionalHeader />
