@@ -9,7 +9,7 @@
   --muted: rgba(240, 240, 240, 0.38);
   --border: rgba(240, 240, 240, 0.09);
   --accent: #e63c2f;
-  --font: var(--font-ibm-plex-mono), ui-monospace, monospace;
+  --font: var(--font-roboto), -apple-system, BlinkMacSystemFont, sans-serif;
 
   min-height: 100dvh;
   background: var(--bg);
@@ -299,7 +299,7 @@ html.refs-list-mode { scroll-snap-type: y mandatory; }
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  margin-top: 80px;
+  padding-top: 40px;
   padding-bottom: 40px;
   padding-left:  calc(var(--padding-x) + env(safe-area-inset-left,  0px));
   padding-right: calc(var(--padding-x) + env(safe-area-inset-right, 0px));
@@ -307,7 +307,7 @@ html.refs-list-mode { scroll-snap-type: y mandatory; }
 }
 
 .refs-root #desktop-app .d-hero-title {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--font);
   font-weight: 900;
   font-size: clamp(32px, 7.8vw, 130px);
   line-height: 0.95;
@@ -321,7 +321,7 @@ html.refs-list-mode { scroll-snap-type: y mandatory; }
 }
 
 .refs-root #desktop-app .d-hero-sub {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--font);
   font-weight: 700;
   font-size: clamp(16px, 2vw, 32px);
   letter-spacing: 0.04em;

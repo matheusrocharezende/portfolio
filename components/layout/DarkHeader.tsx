@@ -2,12 +2,14 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { siteConfig } from "@/lib/site";
+import { navItems, siteConfig } from "@/lib/site";
 
 const SCROLL_THRESHOLD = 8;
 
-export function VisualNotesHeader() {
+export function DarkHeader() {
+  const pathname = usePathname();
   const headerRef = useRef<HTMLElement>(null);
   const lastScrollY = useRef(0);
   const [hidden, setHidden] = useState(false);
@@ -69,24 +71,20 @@ export function VisualNotesHeader() {
               {siteConfig.name}
             </span>
           </Link>
-          <Link
-            href="/about"
-            className="p-4 text-2xl font-medium leading-normal text-white transition-opacity duration-200 hover:opacity-70"
-          >
-            About
-          </Link>
-          <Link
-            href="/references"
-            className="p-4 text-2xl font-medium leading-normal text-white transition-opacity duration-200 hover:opacity-70"
-          >
-            References
-          </Link>
-          <Link
-            href="/visual-notes"
-            className="p-4 text-2xl font-medium leading-normal text-accent"
-          >
-            Visual notes
-          </Link>
+          {navItems.map((item) => {
+            const isActive = pathname.startsWith(item.href);
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`p-4 text-2xl font-medium leading-normal transition-opacity duration-200 ${
+                  isActive ? "text-accent" : "text-white hover:opacity-70"
+                }`}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
         </div>
         <div className="mt-8 h-px w-full bg-white/20" aria-hidden />
       </header>
