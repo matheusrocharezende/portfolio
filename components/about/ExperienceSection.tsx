@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import {
   certifications,
   education,
@@ -7,17 +8,26 @@ import {
 
 const DIVIDER = "border-[#383838]";
 
-export function ExperienceSection() {
+function SectionLabel({ children }: { children: ReactNode }) {
   return (
-    <section className="flex w-full flex-col gap-5 px-10 pb-20 sm:flex-row">
-      <div className="top-0 shrink-0 pr-[40px] sm:sticky sm:w-[445px]">
-        <p className={`border-t-[5px] ${DIVIDER} py-8 text-2xl font-medium tracking-[-0.24px]`}>
-          EXPERIENCE
+    <div className="shrink-0 pr-[10px] sm:sticky sm:top-0 sm:w-[445px]">
+      <div
+        className={`flex h-[202px] w-full flex-col items-start border-t-[5px] ${DIVIDER} pt-[30px] pr-[40px] pb-[40px] pl-[6px]`}
+      >
+        <p className="w-full max-w-[420px] text-2xl leading-[1.4] font-medium tracking-[-0.24px]">
+          {children}
         </p>
       </div>
+    </div>
+  );
+}
 
-      <div className="flex min-w-0 flex-1 flex-col gap-20">
-        <div className={`flex flex-col gap-20 border-t-[5px] ${DIVIDER} py-20`}>
+export function ExperienceSection() {
+  return (
+    <section className="flex w-full flex-col gap-[124px] px-10 pb-20">
+      <div className="flex w-full flex-col gap-5 sm:flex-row sm:items-start">
+        <SectionLabel>EXPERIENCE</SectionLabel>
+        <div className={`flex min-w-0 flex-1 flex-col gap-20 border-t-[5px] ${DIVIDER} py-20`}>
           {experience.map((job, index) => (
             <div
               key={`${job.company}-${job.period}`}
@@ -43,13 +53,15 @@ export function ExperienceSection() {
             </div>
           ))}
         </div>
+      </div>
 
+      <div className="flex w-full flex-col gap-5 sm:flex-row sm:items-start">
+        <SectionLabel>SKILLS</SectionLabel>
         <section
           aria-label="Skills"
-          className={`flex flex-col gap-10 border-t-[5px] ${DIVIDER} pt-20 text-2xl`}
+          className={`flex min-w-0 flex-1 flex-col items-start border-t-[5px] ${DIVIDER} pt-20 text-2xl`}
         >
-          <h2 className="font-medium">Skills</h2>
-          <div className="flex flex-wrap gap-5">
+          <div className="flex w-full flex-wrap gap-5">
             <div className="flex w-full max-w-[600px] flex-col gap-12">
               {skillGroups.slice(0, 2).map((group) => (
                 <div key={group.label} className="flex flex-col gap-3">
@@ -76,24 +88,28 @@ export function ExperienceSection() {
             </div>
           </div>
         </section>
+      </div>
 
+      <div className="flex w-full flex-col gap-5 sm:flex-row sm:items-start">
+        <SectionLabel>EDUCATION</SectionLabel>
         <section
           aria-label="Educational background"
-          className={`flex flex-col gap-10 border-t-[5px] ${DIVIDER} pt-20 text-2xl`}
+          className={`flex min-w-0 flex-1 flex-col items-start border-t-[5px] ${DIVIDER} py-20 text-2xl`}
         >
-          <h2 className="font-medium">Education</h2>
           <div>
             <h4 className="mb-0 leading-[1.4]">{education.degree}</h4>
             <h4 className="leading-[1.4] text-muted">{education.school}</h4>
           </div>
         </section>
+      </div>
 
+      <div className="flex w-full flex-col gap-5 sm:flex-row sm:items-start">
+        <SectionLabel>CERTIFICATIONS</SectionLabel>
         <section
           aria-label="Certifications"
-          className={`flex flex-col gap-10 border-t-[5px] ${DIVIDER} pt-20 pb-20 text-2xl`}
+          className={`flex min-w-0 flex-1 flex-col items-start border-t-[5px] ${DIVIDER} pt-20 text-2xl`}
         >
-          <h2 className="font-medium">Certifications:</h2>
-          <div className="grid grid-cols-1 gap-x-10 gap-y-8 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-x-[37px] gap-y-[37px] sm:grid-cols-2">
             {certifications.map((cert) => (
               <div key={cert.title}>
                 <h4 className="mb-0 leading-[1.4]">{cert.title}</h4>
