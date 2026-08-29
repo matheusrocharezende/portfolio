@@ -143,8 +143,8 @@ export function ReferencesExperience() {
     const prevHtmlBg = root.style.background;
     const prevBodyBg = document.body.style.background;
     const prevOverscroll = document.body.style.overscrollBehaviorY;
-    root.style.background = "#141414";
-    document.body.style.background = "#141414";
+    root.style.background = "#000000";
+    document.body.style.background = "#000000";
     document.body.style.overscrollBehaviorY = "none";
 
     const cleanups: Array<() => void> = [];

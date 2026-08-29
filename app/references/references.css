@@ -4,7 +4,7 @@
    imperatively by ReferencesExperience while this route is mounted. */
 
 .refs-root {
-  --bg: #141414;
+  --bg: #000000;
   --fg: #f0f0f0;
   --muted: rgba(240, 240, 240, 0.38);
   --border: rgba(240, 240, 240, 0.09);
