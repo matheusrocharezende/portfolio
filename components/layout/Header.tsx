@@ -25,7 +25,7 @@ export function Header() {
         </Link>
         <Navigation />
       </div>
-      <div className="mt-8 h-px w-full bg-black" aria-hidden />
+      <div className="mt-8 h-2 w-full bg-black" aria-hidden />
     </header>
   );
 }

@@ -91,7 +91,7 @@ export function DarkHeader() {
             );
           })}
         </div>
-        <div className="mt-8 h-px w-full bg-white/20" aria-hidden />
+        <div className="mt-8 h-2 w-full bg-white/20" aria-hidden />
       </header>
       <div style={{ height: headerHeight }} aria-hidden />
     </>
