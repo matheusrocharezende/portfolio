@@ -26,8 +26,8 @@ export function ProjectCarousel({ projects }: ProjectCarouselProps) {
   }, []);
 
   return (
-    <>
-      <section className="w-full px-10 py-40">
+    <section className="w-full px-10 py-40">
+      <div className="relative">
         <div
           ref={scrollRef}
           onWheel={handleWheel}
@@ -65,20 +65,20 @@ export function ProjectCarousel({ projects }: ProjectCarouselProps) {
             </Link>
           ))}
         </div>
-      </section>
 
-      <div
-        className="pointer-events-none fixed inset-x-0 bottom-0 z-50 flex justify-center overflow-hidden px-10 pb-16"
-        aria-hidden={!hoveredProject}
-      >
-        <p
-          className={`text-center text-[clamp(3rem,10vw,8rem)] font-medium uppercase leading-normal whitespace-nowrap transition-transform duration-500 ease-[cubic-bezier(0.2,0,0,1)] ${
-            hoveredProject ? "translate-y-0" : "translate-y-full"
-          }`}
+        <div
+          className="pointer-events-none absolute inset-x-0 top-full flex justify-center overflow-hidden px-10 pt-10"
+          aria-hidden={!hoveredProject}
         >
-          {hoveredProject?.title ?? ""}
-        </p>
+          <p
+            className={`text-center text-[clamp(3rem,10vw,8rem)] font-medium uppercase leading-normal whitespace-nowrap transition-transform duration-500 ease-[cubic-bezier(0.2,0,0,1)] ${
+              hoveredProject ? "translate-y-0" : "translate-y-full"
+            }`}
+          >
+            {hoveredProject?.title ?? ""}
+          </p>
+        </div>
       </div>
-    </>
+    </section>
   );
 }
