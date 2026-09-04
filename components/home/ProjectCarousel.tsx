@@ -31,6 +31,7 @@ export function ProjectCarousel({ projects }: ProjectCarouselProps) {
         <div
           ref={scrollRef}
           onWheel={handleWheel}
+          onMouseLeave={() => setHoveredSlug(null)}
           className="carousel-scroll flex snap-x snap-mandatory gap-10 overflow-x-auto scroll-smooth"
           role="region"
           aria-label="Projetos"
@@ -41,7 +42,6 @@ export function ProjectCarousel({ projects }: ProjectCarouselProps) {
               href={`/projects/${project.slug}`}
               className="group relative block shrink-0 snap-start"
               onMouseEnter={() => setHoveredSlug(project.slug)}
-              onMouseLeave={() => setHoveredSlug(null)}
               onFocus={() => setHoveredSlug(project.slug)}
               onBlur={() => setHoveredSlug(null)}
             >
