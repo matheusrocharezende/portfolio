@@ -68,7 +68,7 @@ export function ProjectCarousel({ projects }: ProjectCarouselProps) {
       </section>
 
       <div
-        className="pointer-events-none fixed inset-x-0 bottom-0 z-50 flex justify-center overflow-hidden px-10"
+        className="pointer-events-none fixed inset-x-0 bottom-0 z-50 flex justify-center overflow-hidden px-10 pb-16"
         aria-hidden={!hoveredProject}
       >
         <p
